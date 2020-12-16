@@ -23,7 +23,7 @@ var err error
 func main() {
 	config.DB, err = gorm.Open("mysql", config.DbURL(config.BuildDBConfig()))
 	if err != nil {
-	 fmt.Println("Status:", err)
+	 fmt.Println("DB Status:", err)
 	}
 	defer config.DB.Close()
 	config.DB.AutoMigrate(&models.User{})

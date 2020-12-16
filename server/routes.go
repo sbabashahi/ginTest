@@ -61,6 +61,7 @@ var db = make(map[string]string)
 
 //SetupRouter ... Configure routes
 func SetupRouter() *gin.Engine {
+	gin.SetMode(gin.DebugMode)
 	r := gin.Default()
 	grp1 := r.Group("/user-api")
 	{
